@@ -1,0 +1,1 @@
+/home/kenta/.xmonad/xmonad.hs

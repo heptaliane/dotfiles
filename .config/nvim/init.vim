@@ -1,0 +1,1 @@
+/home/kenta/.config/nvim/init.vim
