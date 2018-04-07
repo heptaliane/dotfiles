@@ -1,1 +1,15 @@
-/home/kenta/.config/nvim/dein/dein.toml
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+depends = ['vim-fguitive']
+hook_add = '''
+    execute 'source ' . g:dein_config_dir . 'lightline.vim'
+'''
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+source_add = '''
+    execute 'source ' . g:dein_config_dir . 'syntastic.vim'
+'''
