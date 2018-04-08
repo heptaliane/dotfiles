@@ -4,3 +4,17 @@ on_event = ['VimEnter']
 hook_source = '''
     execute 'source ' . g:dein_config_dir . 'caw.vim'
 '''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+if = 'has("nvim") || has("python3")'
+on_event = ['InsertEnter']
+build = '''
+    if has("python3")
+        echo 'install neovim python3'
+        sudo pip install neovim
+    endif
+'''
+hook_add = '''
+    execute 'source ' .g:dein_config_dir . 'deoplete.vim'
+'''

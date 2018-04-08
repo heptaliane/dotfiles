@@ -25,3 +25,9 @@ repo = 'scrooloose/nerdtree'
 hook_add = '''
     execute 'source ' . g:dein_config_dir . 'nerdtree.vim'
 '''
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+    execute 'source ' . g:dein_config_dir . 'vim-indent-guides.vim'
+'''
