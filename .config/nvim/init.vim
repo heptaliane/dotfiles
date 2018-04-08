@@ -1,6 +1,7 @@
 " ======================
 " Dein settings
 " ======================
+filetype on
 
 " set dein cache path and dein config dir
 if has('nvim')
@@ -49,7 +50,7 @@ endif
 colorscheme ron
 
 syntax on
-filetype on
+filetype plugin indent on
 
 set number
 set expandtab

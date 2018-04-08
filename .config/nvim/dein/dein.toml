@@ -3,13 +3,25 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-depends = ['vim-fguitive']
+depends = ['tpope/vim-fguitive']
 hook_add = '''
     execute 'source ' . g:dein_config_dir . 'lightline.vim'
 '''
 
 [[plugins]]
 repo = 'scrooloose/syntastic'
-source_add = '''
+hook_add = '''
     execute 'source ' . g:dein_config_dir . 'syntastic.vim'
+'''
+
+[[plugins]]
+repo = 't9md/vim-quickhl'
+hook_add = '''
+    execute 'source ' . g:dein_config_dir . 'vim-quickhl.vim'
+'''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+    execute 'source ' . g:dein_config_dir . 'nerdtree.vim'
 '''
