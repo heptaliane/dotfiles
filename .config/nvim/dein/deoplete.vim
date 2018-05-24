@@ -7,5 +7,8 @@ let g:deoplete#file#enable_buffer_path = 1
 let g:deoplete#max_slist = 10000
 
 inoremap <expr><C-h> deoplete#smart_close_popup()
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" :
+    \ neosnippet#expandable_or_jumpable() ?
+    \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 inoremap <expr><BS> pumvisible() ? "\<C-h>" : "\<BS>"
+inoremap <expr><CR> pumvisible() ? deoplete#close_popup() : "\<CR>"

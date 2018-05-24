@@ -8,9 +8,8 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-set EXPO_DEBUG=true
-
 xmodmap ~/.xmodmaprc
 # alias
 alias ipconfig='ip -f inet addr'
 alias sl='ls'
+alias vim='NVIM_LISTEN_ADDRESS=/tmp/nvim_socket nvim'

@@ -60,12 +60,15 @@ set smartindent
 set autoindent
 set list
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
-set showmode
 set colorcolumn=80
+set wildmenu
 set showmatch
+set title
 set scrolloff=5
 set cindent
 set cinoptions=g0
+set clipboard+=unnamedplus
+set conceallevel=0
 
 noremap <space>p zfa(
 noremap <space>b zfa{
@@ -75,3 +78,23 @@ noremap <space>O zO
 noremap <space>t :tabnew<CR>
 noremap <space>h gT
 noremap <space>l gt
+noremap <TAB> <C-w>w
+noremap <space>s :vs<CR>
+
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap ( ()<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+inoremap ` ``<Left>
+
+
+" ======================
+" ft plugins
+" ======================
+
+let s:ftplugin_dir = '~/.config/nvim/ftplugin/'
+let s:javascript_plugin_path = s:ftplugin_dir . 'javascript.vim'
+au Bufread,BufNewFile *.js execute 'source ' . s:javascript_plugin_path
+au Bufread,BufNewFile *.jsx execute 'source ' . s:javascript_plugin_path
+au Bufread,BufNewFile *.html execute 'source ' . s:javascript_plugin_path
