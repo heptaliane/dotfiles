@@ -34,3 +34,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+    execute 'source ' . g:dein_config_dir . 'gitgutter.vim'
+'''

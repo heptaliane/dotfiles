@@ -1,5 +1,5 @@
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
-export XMODIFIEIERS="@im=fcitx"
+export XMODIFIERS="@im=fcitx"
 
 exec startxfce4

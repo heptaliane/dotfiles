@@ -5,8 +5,10 @@ let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 let g:tex_flavor = 'latexmk'
 let g:tex_conceal = ''
 let g:vimtex_compiler_progname = 'nvr'
+let g:vimtex_compiler_latexmk_engines = {'_': '-pdfdvi'}
 let g:vimtex_compiler_latexmk = {
     \ 'options' : [
+    \   '-pdfdvi',
     \   '-verbose',
     \   '-file-line-error',
     \   '-synctex=1',
@@ -16,4 +18,4 @@ let g:vimtex_compiler_latexmk = {
 nmap <space>x <plug>(vimtex-compile)
 nmap <space>v <plug>(vimtex-view)
 
-inoremap $ $$<Left>
+au Bufread,BufNewFile *.tex execute 'inoremap $ $$<Left>'
