@@ -26,6 +26,12 @@ hook_add = '''
     execute 'source ' . g:dein_config_dir . 'nerdtree.vim'
 '''
 
+# [[plugins]]
+# repo = 'Shougo/denite.nvim'
+# hook_add = '''
+#     execute 'source ' . g:dein_config_dir . 'denite.vim'
+# '''
+
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
 hook_add = '''
@@ -40,3 +46,6 @@ repo = 'airblade/vim-gitgutter'
 hook_add = '''
     execute 'source ' . g:dein_config_dir . 'gitgutter.vim'
 '''
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'

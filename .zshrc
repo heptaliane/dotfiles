@@ -31,3 +31,7 @@ PROMPT='[%F{200}%n%F{white}@%F{010}%c%F{015}]%# '
 bindkey -v
 setopt AUTO_CD
 export LSCOLORS='exfxcxdxbxegedagacad'
+zstyle ':completion:*' list-colors ''
+
+# xmodmap
+xmodmap ~/.xmodmaprc
