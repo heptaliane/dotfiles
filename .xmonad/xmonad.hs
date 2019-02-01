@@ -44,7 +44,7 @@ myDisp = "rot-xrandr.sh"
 -- mod mask key
 modm = mod4Mask
 -- workspaces
-myWorkspaces = ["1", "2" ,"3", "4", "5", "6" ]
+myWorkspaces = ["1", "2" ,"3", "4", "5", "6", "7", "8"]
 -- kill command
 killCommand = "xmonad --recompile && xmonad --restart && xfce4-panel -r"
 

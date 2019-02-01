@@ -1,6 +1,6 @@
 let g:syntastic_mode_map = {
     \ 'mode': 'passive',
-    \ 'active_filetypes': ['python', 'cpp', 'c', 'sh', 'markdown', 'tex']
+    \ 'active_filetypes': ['python', 'cpp', 'c', 'sh', 'markdown']
     \ }
 
 let g:syntastic_enable_signs = 1

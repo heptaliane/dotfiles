@@ -1,1 +1,5 @@
 keycode 102 = Escape
+keycode 101 = Zenkaku_Hankaku
+! keycode 49 = Zenkaku_Hankaku
+! keysym Henkan_Mode = Zenkaku_Hankaku
+! keysym Muhenkan = Escape
