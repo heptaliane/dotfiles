@@ -47,7 +47,7 @@ endif
 " General Settings
 " ======================
 
-colorscheme ron
+colorscheme molokai
 
 syntax on
 filetype plugin indent on
@@ -95,7 +95,9 @@ inoremap ` ``<Left>
 
 let s:ftplugin_dir = '~/.config/nvim/ftplugin/'
 let s:javascript_plugin_path = s:ftplugin_dir . 'javascript.vim'
+let s:rust_plugin_path = s:ftplugin_dir . 'rust.vim'
 au Bufread,BufNewFile *.js execute 'source ' . s:javascript_plugin_path
 au Bufread,BufNewFile *.json execute 'source ' . s:javascript_plugin_path
 au Bufread,BufNewFile *.jsx execute 'source ' . s:javascript_plugin_path
 au Bufread,BufNewFile *.html execute 'source ' . s:javascript_plugin_path
+au FileType rust execute 'source ' . s:rust_plugin_path
