@@ -3,6 +3,7 @@ alias ipconfig='ip -f inet addr'
 alias ls='ls --color'
 alias sl='ls'
 alias vim='NVIM_LSTEM_ADDRESS=/tmp/nvim_socket nvim'
+alias mount='mount -o gid=$(id -g),uid=$(id -u)'
 alias sudo='sudo ' # enable complete after sudo statement
 
 # The following lines were added by compinstall
@@ -35,3 +36,7 @@ zstyle ':completion:*' list-colors ''
 
 # xmodmap
 xmodmap ~/.xmodmaprc
+
+# nvm
+nvm_script="/usr/share/nvm/init-nvm.sh"
+[ -e $nvm_script ] && source $nvm_script
