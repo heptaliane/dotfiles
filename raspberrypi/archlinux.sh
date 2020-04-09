@@ -35,7 +35,7 @@ fi
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 # Setup login user
-useradd -g wheel -s /bin/zsh $username
+useradd -g wheel -s /bin/zsh -m $username
 echo "$username:$password" | chpasswd
 su $username
 cd
