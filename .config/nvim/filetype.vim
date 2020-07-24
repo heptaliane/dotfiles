@@ -4,9 +4,9 @@
 
 " set ftplugin config basedir
 if has('unix')
-    let s:ftplugin_dir = expand('~/.config/nvim/ftplugin')
+    let s:ftplugin_dir = expand('~/.config/nvim/ftplugin/')
 else
-    let s:ftplugin_dir = expand('~/AppData/Local/nvim/ftplugin')
+    let s:ftplugin_dir = expand('~/AppData/Local/nvim/ftplugin/')
 endif
 let s:javascript_plugin_path = s:ftplugin_dir . 'javascript.vim'
 let s:rust_plugin_path = s:ftplugin_dir . 'rust.vim'

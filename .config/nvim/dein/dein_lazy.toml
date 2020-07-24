@@ -16,6 +16,8 @@ build = '''
     endif
 '''
 hook_add = '''
+    let s:deoplete_path = g:dein_cache_path . '/repos/github.com/Shougo/deoplete.nvim'
+    execute 'set runtimepath+=' . s:deoplete_path
     execute 'source ' . g:dein_config_dir . 'deoplete.vim'
 '''
 
