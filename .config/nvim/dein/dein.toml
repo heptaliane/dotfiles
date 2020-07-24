@@ -52,3 +52,6 @@ repo = 'Shougo/neomru.vim'
 
 [[plugins]]
 repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'ConradIrwin/vim-bracketed-paste'

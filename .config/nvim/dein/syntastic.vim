@@ -9,4 +9,4 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_rust_checkers = ['rustc', 'cargo']
+let g:syntastic_rust_checkers = ['cargo', 'rustc']
