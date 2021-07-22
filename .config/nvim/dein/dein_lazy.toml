@@ -6,22 +6,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-if = 'has("nvim") || has("python3")'
-on_event = ['InsertEnter']
-build = '''
-    if has("python3")
-        echo 'install neovim python3'
-        sudo pip install neovim
-    endif
-'''
-hook_add = '''
-    let s:deoplete_path = g:dein_cache_path . '/repos/github.com/Shougo/deoplete.nvim'
-    execute 'set runtimepath+=' . s:deoplete_path
-    execute 'source ' . g:dein_config_dir . 'deoplete.vim'
-'''
-
-[[plugins]]
 repo = 'Shougo/neosnippet'
 hook_add = '''
     execute 'source ' . g:dein_config_dir . 'neosnippet.vim'

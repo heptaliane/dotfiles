@@ -2,8 +2,6 @@
 " General Settings
 " ======================
 
-colorscheme molokai
-
 syntax on
 filetype plugin indent on
 

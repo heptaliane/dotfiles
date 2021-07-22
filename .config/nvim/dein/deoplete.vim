@@ -14,5 +14,6 @@ call deoplete#custom#option({
  \ 'ignore_case': v:false,
  \ 'min_pattern_length': 1,
  \ 'max_list': 500,
+ \ 'enable_buffer_path': v:true,
+ \ 'skip_multibyte': v:true,
  \ })
-call deoplete#custom#var('file', 'enable_buffer_path', v:true)
