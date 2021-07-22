@@ -1,13 +1,11 @@
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
-    if has('unix')
-        let s:deoplete_repo = '/repos/github.com/Shougo/deoplete.nvim'
-        let s:deoplete_path = g:dein_cache_path . s:deoplete_repo
-        execute 'set runtimepath+=' . s:deoplete_path
-    fi
     execute 'source ' . g:dein_config_dir . 'deoplete.vim'
 '''
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -69,3 +67,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'ConradIrwin/vim-bracketed-paste'
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'

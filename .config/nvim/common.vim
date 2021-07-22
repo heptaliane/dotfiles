@@ -23,23 +23,19 @@ set cinoptions=g0
 set clipboard+=unnamedplus
 set conceallevel=0
 
-noremap <space>p zfa(
-noremap <space>b zfa{
-noremap <space>s zfa[
 noremap <space>o zo
 noremap <space>O zO
 noremap <space>t :tabnew<CR>
 noremap <space>h gT
 noremap <space>l gt
 noremap <TAB> <C-w>w
-noremap <space>s :vs<CR>
+noremap <space>v :vs<CR>
+noremap <space>s :sv<CR><C-W>w:terminal<CR>
+tnoremap <ESC> <C-\><C-n>
 
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap ( ()<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap ` ``<Left>
+au TermOpen * startinsert
+au TermOpen * set nonumber
+au WinEnter * if &buftype ==# 'terminal' | startinsert | endif
 
 " ======================
 " color settings
