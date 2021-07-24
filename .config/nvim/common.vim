@@ -30,11 +30,12 @@ noremap <space>h gT
 noremap <space>l gt
 noremap <TAB> <C-w>w
 noremap <space>v :vs<CR>
-noremap <space>s :sv<CR><C-W>w:terminal<CR>
+noremap <space>s :sp<CR><C-W>w7<C-W>_:terminal<CR>
 tnoremap <ESC> <C-\><C-n>
 
 au TermOpen * startinsert
 au TermOpen * set nonumber
+au TermOpen * set scrolloff=0
 au WinEnter * if &buftype ==# 'terminal' | startinsert | endif
 
 " ======================
