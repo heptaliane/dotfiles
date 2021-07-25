@@ -70,3 +70,9 @@ repo = 'ConradIrwin/vim-bracketed-paste'
 
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-dictionary'
+hook_add = '''
+    execute 'source ' . g:dein_config_dir . 'deoplete-dictionary.vim'
+'''
