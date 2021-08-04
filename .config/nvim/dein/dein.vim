@@ -2,11 +2,7 @@
 " Dein startup settings
 " ======================
 
-if has('unix')
-    let g:dein_cache_path = expand('~/.cache/nvim/dein')
-else
-    let g:dein_cache_path = expand('~/.cache/nvim/dein')
-endif
+let g:dein_cache_path = g:nvim_cache_dir . 'dein/'
 
 " set dein.vim directory
 let s:dein_dir = g:dein_cache_path . '/repos/github.com/Shougo/dein.vim'
