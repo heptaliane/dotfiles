@@ -18,12 +18,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
-hook_add = '''
-    execute 'source ' . g:dein_config_dir . 'syntastic.vim'
-'''
-
-[[plugins]]
 repo = 't9md/vim-quickhl'
 hook_add = '''
     execute 'source ' . g:dein_config_dir . 'vim-quickhl.vim'
@@ -68,11 +62,26 @@ hook_add = '''
 [[plugins]]
 repo = 'ConradIrwin/vim-bracketed-paste'
 
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
+# [[plugins]]
+# repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-dictionary'
 hook_add = '''
     execute 'source ' . g:dein_config_dir . 'deoplete-dictionary.vim'
+'''
+
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+hook_add = '''
+    execute 'source ' . g:dein_config_dir . 'vim-lsp-settings.vim'
 '''
