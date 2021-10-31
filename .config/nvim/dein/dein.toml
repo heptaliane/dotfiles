@@ -12,7 +12,7 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-depends = ['tpope/vim-fguitive']
+depends = ['tpope/vim-fguitive', 'halkn/lightline-lsp']
 hook_add = '''
     execute 'source ' . g:dein_config_dir . 'lightline.vim'
 '''
@@ -62,8 +62,8 @@ hook_add = '''
 [[plugins]]
 repo = 'ConradIrwin/vim-bracketed-paste'
 
-# [[plugins]]
-# repo = 'jiangmiao/auto-pairs'
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-dictionary'
@@ -85,3 +85,6 @@ repo = 'mattn/vim-lsp-settings'
 hook_add = '''
     execute 'source ' . g:dein_config_dir . 'vim-lsp-settings.vim'
 '''
+
+[[plugins]]
+repo = 'halkn/lightline-lsp'
