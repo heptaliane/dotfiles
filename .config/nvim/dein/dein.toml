@@ -67,6 +67,7 @@ repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-dictionary'
+depends = ['deoplete.nvim']
 hook_add = '''
     execute 'source ' . g:dein_config_dir . 'deoplete-dictionary.vim'
 '''
@@ -88,3 +89,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'halkn/lightline-lsp'
+
+[[plugins]]
+repo = 'luochen1990/rainbow'
+hook_add = '''
+    execute 'source ' . g:dein_config_dir . 'rainbow.vim'
+'''

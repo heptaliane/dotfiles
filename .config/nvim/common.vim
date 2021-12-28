@@ -23,6 +23,7 @@ set cinoptions=g0
 set clipboard+=unnamedplus
 set conceallevel=0
 
+map Y yy
 noremap <space>o zo
 noremap <space>O zO
 noremap <space>t :tabnew<CR>
@@ -30,13 +31,17 @@ noremap <space>h gT
 noremap <space>l gt
 noremap <TAB> <C-w>w
 noremap <space>v :vs<CR>
-noremap <space>s :sp<CR><C-W>w7<C-W>_:terminal<CR>
-tnoremap <ESC> <C-\><C-n>
 
-au TermOpen * startinsert
-au TermOpen * set nonumber
-au TermOpen * set scrolloff=0
-au WinEnter * if &buftype ==# 'terminal' | startinsert | endif
+" nvim settings
+if has('nvim')
+    noremap <space>s :sp<CR><C-W>w7<C-W>_:terminal<CR>
+    tnoremap <ESC> <C-\><C-n>
+
+    au TermOpen * startinsert
+    au TermOpen * set nonumber
+    au TermOpen * set scrolloff=0
+    au WinEnter * if &buftype ==# 'terminal' | startinsert | endif
+endif
 
 " ======================
 " color settings
