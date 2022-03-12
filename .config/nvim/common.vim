@@ -23,7 +23,11 @@ set cinoptions=g0
 set clipboard+=unnamedplus
 set conceallevel=0
 
-unmap Y
+" For neovim >= 0.6.0
+try
+    unmap Y
+endtry
+
 noremap <space>o zo
 noremap <space>O zO
 noremap <space>t :tabnew<CR>
