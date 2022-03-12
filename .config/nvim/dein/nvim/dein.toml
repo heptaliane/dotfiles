@@ -5,9 +5,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/neco-syntax'
-
-[[plugins]]
 repo = 'lighttiger2505/deoplete-vim-lsp'
 
 [[plugins]]

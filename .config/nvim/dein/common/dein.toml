@@ -68,3 +68,9 @@ repo = 'luochen1990/rainbow'
 hook_add = '''
     execute 'source ' . g:dein_common_config_dir . 'rainbow.vim'
 '''
+
+[[plugins]]
+repo = 'liuchengxu/vista.vim'
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'vista.vim'
+'''
