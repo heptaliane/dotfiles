@@ -1,0 +1,70 @@
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+depends = ['tpope/vim-fugitive', 'halkn/lightline-lsp']
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'lightline.vim'
+'''
+
+[[plugins]]
+repo = 't9md/vim-quickhl'
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'vim-quickhl.vim'
+'''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'nerdtree.vim'
+'''
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'vim-indent-guides.vim'
+'''
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'gitgutter.vim'
+'''
+
+[[plugins]]
+repo = 'tomasr/molokai'
+merged = 0
+hook_add = '''
+    let g:molokai_original = 1
+'''
+
+[[plugins]]
+repo = 'ConradIrwin/vim-bracketed-paste'
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'vim-lsp-settings.vim'
+'''
+
+[[plugins]]
+repo = 'halkn/lightline-lsp'
+
+[[plugins]]
+repo = 'luochen1990/rainbow'
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'rainbow.vim'
+'''

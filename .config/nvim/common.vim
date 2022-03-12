@@ -50,3 +50,8 @@ endif
 hi Visual ctermbg=240
 hi Comment ctermfg=102
 hi MatchParen ctermfg=208 ctermbg=233
+try
+    colorscheme molokai
+catch
+    colorscheme ron
+endtry

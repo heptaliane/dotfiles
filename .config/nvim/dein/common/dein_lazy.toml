@@ -2,13 +2,7 @@
 repo = 'tyru/caw.vim'
 on_event = ['VimEnter']
 hook_add = '''
-    execute 'source ' . g:dein_config_dir . 'caw.vim'
-'''
-
-[[plugins]]
-repo = 'Shougo/neosnippet'
-hook_add = '''
-    execute 'source ' . g:dein_config_dir . 'neosnippet.vim'
+    execute 'source ' . g:dein_common_config_dir . 'caw.vim'
 '''
 
 [[plugins]]
@@ -16,7 +10,7 @@ repo = 'lervag/vimtex'
 on_event = ['VimEnter']
 on_ft = 'tex'
 hook_add = '''
-    execute 'source ' . g:dein_config_dir . 'vimtex.vim'
+    execute 'source ' . g:dein_common_config_dir . 'vimtex.vim'
 '''
 
 [[plugins]]
@@ -33,10 +27,6 @@ hook_add = '''
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 on_ft = 'markdown'
-
-[[plugins]]
-repo = 'zchee/deoplete-jedi'
-on_ft = ['python']
 
 [[plugins]]
 repo = 'othree/yajs.vim'

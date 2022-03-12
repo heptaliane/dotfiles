@@ -15,15 +15,40 @@ endif
 " add dein.vim to runtime path
 execute 'set runtimepath+=' . fnamemodify(s:dein_dir, ':p')
 
+" set dein config dir
+let g:dein_common_config_dir = g:dein_config_dir . "common/"
+let g:dein_nvim_config_dir = g:dein_config_dir . "nvim/"
+let g:dein_vim_config_dir = g:dein_config_dir . "vim/"
+
 if dein#load_state(g:dein_cache_path)
     call dein#begin(g:dein_cache_path)
 
-    if filereadable(expand(g:dein_config_dir . 'dein.toml'))
-        call dein#load_toml(g:dein_config_dir . 'dein.toml', {'lazy': 0})
+    if filereadable(expand(g:dein_common_config_dir . 'dein.toml'))
+        call dein#load_toml(g:dein_common_config_dir . 'dein.toml', {'lazy': 0})
     endif
 
-    if filereadable(expand(g:dein_config_dir . 'dein_lazy.toml'))
-        call dein#load_toml(g:dein_config_dir . 'dein_lazy.toml', {'lazy': 1})
+    if filereadable(expand(g:dein_common_config_dir . 'dein_lazy.toml'))
+        call dein#load_toml(g:dein_common_config_dir . 'dein_lazy.toml', {'lazy': 1})
+    endif
+
+    if has("nvim")
+        if filereadable(expand(g:dein_nvim_config_dir . 'dein.toml'))
+            call dein#load_toml(g:dein_nvim_config_dir . 'dein.toml', {'lazy': 0})
+        endif
+
+        if filereadable(expand(g:dein_nvim_config_dir . 'dein_lazy.toml'))
+            call dein#load_toml(g:dein_nvim_config_dir . 'dein_lazy.toml', {'lazy': 1})
+        endif
+    endif
+
+    if !has("nvim")
+        if filereadable(expand(g:dein_vim_config_dir . 'dein.toml'))
+            call dein#load_toml(g:dein_vim_config_dir . 'dein.toml', {'lazy': 0})
+        endif
+
+        if filereadable(expand(g:dein_vim_config_dir . 'dein_lazy.toml'))
+            call dein#load_toml(g:dein_vim_config_dir . 'dein_lazy.toml', {'lazy': 1})
+        endif
     endif
 
     call dein#end()

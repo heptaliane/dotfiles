@@ -1,0 +1,18 @@
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+    execute 'source ' . g:dein_nvim_config_dir . 'deoplete.vim'
+'''
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-dictionary'
+depends = ['deoplete.nvim']
+hook_add = '''
+    execute 'source ' . g:dein_nvim_config_dir . 'deoplete-dictionary.vim'
+'''
