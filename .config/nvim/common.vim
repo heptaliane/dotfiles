@@ -23,10 +23,9 @@ set cinoptions=g0
 set clipboard+=unnamedplus
 set conceallevel=0
 
-" For neovim >= 0.6.0
-try
+if has("nvim") && v:version >= 600
     unmap Y
-endtry
+endif
 
 noremap <space>o zo
 noremap <space>O zO
