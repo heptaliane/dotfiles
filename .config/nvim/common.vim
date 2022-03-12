@@ -23,7 +23,7 @@ set cinoptions=g0
 set clipboard+=unnamedplus
 set conceallevel=0
 
-map Y yy
+unmap Y
 noremap <space>o zo
 noremap <space>O zO
 noremap <space>t :tabnew<CR>

@@ -15,6 +15,8 @@ let s:text_plugin_path = s:ftplugin_dir . 'text.vim'
 au Bufread,BufNewFile *.js execute 'source ' . s:javascript_plugin_path
 au Bufread,BufNewFile *.json execute 'source ' . s:javascript_plugin_path
 au Bufread,BufNewFile *.jsx execute 'source ' . s:javascript_plugin_path
+au Bufread,BufNewFile *.ts execute 'source ' . s:javascript_plugin_path
+au Bufread,BufNewFile *.tsx execute 'source ' . s:javascript_plugin_path
 au Bufread,BufNewFile *.html execute 'source ' . s:javascript_plugin_path
 au FileType rust execute 'source ' . s:rust_plugin_path
 au FileType markdown execute 'source ' . s:markdown_plugin_path
