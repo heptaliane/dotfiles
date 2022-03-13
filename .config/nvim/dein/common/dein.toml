@@ -74,3 +74,19 @@ repo = 'liuchengxu/vista.vim'
 hook_add = '''
     execute 'source ' . g:dein_common_config_dir . 'vista.vim'
 '''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'deoplete.vim'
+'''
+
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-dictionary'
+depends = ['deoplete.nvim']
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'deoplete-dictionary.vim'
+'''
