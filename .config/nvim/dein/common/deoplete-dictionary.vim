@@ -4,7 +4,7 @@ if has('unix')
 endif
 
 if has('win32') || has('win64')
-    let s:dict_dir = 'dict/'
+    let s:dict_dir = g:nvim_cache_dir . 'dict/'
     if !isdirectory(s:dict_dir)
         execute '!mkdir ' s:dict_dir
     endif

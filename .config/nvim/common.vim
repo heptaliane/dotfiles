@@ -22,6 +22,7 @@ set cindent
 set cinoptions=g0
 set clipboard+=unnamedplus
 set conceallevel=0
+set fileformat=unix
 
 if has("nvim") && v:version >= 600
     unmap Y
