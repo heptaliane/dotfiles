@@ -24,7 +24,7 @@ set clipboard+=unnamedplus
 set conceallevel=0
 set fileformat=unix
 
-if has("nvim") && v:version >= 600
+if has("nvim-0.6")
     unmap Y
 endif
 
