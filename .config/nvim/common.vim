@@ -24,7 +24,7 @@ set clipboard+=unnamedplus
 set conceallevel=0
 set fileformat=unix
 
-if has("nvim-0.6")
+if has('nvim-0.6')
     unmap Y
 endif
 
@@ -45,6 +45,10 @@ if has('nvim')
     au TermOpen * set nonumber
     au TermOpen * set scrolloff=0
     au WinEnter * if &buftype ==# 'terminal' | startinsert | endif
+
+    if has('windows')
+        set shell='powershell'
+    endif
 endif
 
 " ======================

@@ -11,11 +11,14 @@ endif
 let g:dein_config_dir = g:nvim_config_dir . 'dein/'
 
 " set cache dir
-if has("nvim")
+if has('nvim')
     let g:nvim_cache_dir = expand('~/.cache/nvim/')
 else
     let g:nvim_cache_dir = expand('~/.cache/vim/')
 endif
+
+" Install dependencies
+execute 'source ' . g:nvim_config_dir . 'dependencies.vim'
 
 " Dein startup
 execute 'source ' . g:dein_config_dir . 'dein.vim'
