@@ -1,4 +1,4 @@
-if !has('deno')
+if exepath('deno') == ""
     if has('unix')
         !curl -fsSL https://deno.land/x/install/install.sh | sh
     elseif has('windows')

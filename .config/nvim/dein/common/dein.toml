@@ -5,6 +5,9 @@ repo = 'Shougo/neco-syntax'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 depends = ['tpope/vim-fugitive', 'halkn/lightline-lsp']
 hook_add = '''
@@ -17,11 +20,11 @@ hook_add = '''
     execute 'source ' . g:dein_common_config_dir . 'vim-quickhl.vim'
 '''
 
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-    execute 'source ' . g:dein_common_config_dir . 'nerdtree.vim'
-'''
+#[[plugins]]
+#repo = 'scrooloose/nerdtree'
+#hook_add = '''
+#    execute 'source ' . g:dein_common_config_dir . 'nerdtree.vim'
+#'''
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
@@ -90,3 +93,42 @@ depends = ['deoplete.nvim']
 hook_add = '''
     execute 'source ' . g:dein_common_config_dir . 'deoplete-dictionary.vim'
 '''
+
+[[plugins]]
+repo = 'Shougo/ddu.vim'
+depends = ['denops.vim']
+hook_add = '''
+    execute 'source ' . g:dein_common_config_dir . 'ddu.vim'
+'''
+
+[[plugins]]
+repo = 'Shougo/ddu-commands.vim'
+depends = ['ddu.vim']
+
+[[plugins]]
+repo = 'Shougo/ddu-column-filename'
+depends = ['ddu.vim']
+
+[[plugins]]
+repo = 'Shougo/ddu-ui-ff'
+depends = ['ddu.vim']
+
+[[plugins]]
+repo = 'Shougo/ddu-ui-filer'
+depends = ['ddu.vim']
+
+[[plugins]]
+repo = 'Shougo/ddu-source-file'
+depends = ['ddu.vim', 'ddu-kind-file']
+
+[[plugins]]
+repo = 'Shougo/ddu-filter-matcher_substring'
+depends =  ['ddu.vim']
+
+[[plugins]]
+repo = 'Shougo/ddu-filter-matcher_hidden'
+depends =  ['ddu.vim']
+
+[[plugins]]
+repo = 'Shougo/ddu-kind-file'
+depends =  ['ddu.vim']
