@@ -1,3 +1,5 @@
 if has('win32') || has('win64')
-    Guifont! Ricty Diminished:h11
+    try
+        Guifont! HackGen35 Console NFJ:h11
+    endtry
 endif
