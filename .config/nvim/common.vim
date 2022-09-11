@@ -46,7 +46,7 @@ if has('nvim')
     au TermOpen * set scrolloff=0
     au WinEnter * if &buftype ==# 'terminal' | startinsert | endif
 
-    if has('windows')
+    if has('win64')
         set shell='powershell'
     endif
 endif
