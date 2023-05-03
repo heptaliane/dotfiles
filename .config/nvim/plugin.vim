@@ -131,6 +131,7 @@ call s:custom_setting('vim-lsp-settings')
 call s:custom_setting('lightline')
 call s:custom_setting('rainbow')
 call s:custom_setting('vista')
+call s:custom_setting('vimtex')
 
 if exepath('deno') != ''
     call s:custom_setting('ddu')
