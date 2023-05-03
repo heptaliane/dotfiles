@@ -7,7 +7,6 @@ let g:lsp_diagnostics_virtual_text_prefix = " ‣ "
 let g:lsp_document_code_action_signs_enabled = v:false
 
 " python lsp server config
-" Use deoplete-jedi completion
 let s:pylsp_config = {
 \   'pylsp': {
 \       'configrationSources': ['flake8'],
@@ -17,7 +16,7 @@ let s:pylsp_config = {
 \               'maxLineLength': 88,
 \           },
 \           'jedi_completion': {
-\               'enabled': v:false,
+\               'enabled': v:true,
 \           },
 \           'pycodestyle': {
 \               'enabled': v:false,
@@ -32,9 +31,9 @@ let g:lsp_settings = {
 \   },
 \}
 
-nmap <space>d :LspPeekDefinition<CR>
-nmap <space>D :LspDefinition<CR>
-nmap <space>w :LspNextDiagnostic<CR>
-nmap <space>/ :LspReferences<CR>
-nmap <space>r :LspRename<CR>
-nmap <space>f :LspDocumentFormat<CR>
+nnoremap <space>d :LspPeekDefinition<CR>
+nnoremap <space>D :LspDefinition<CR>
+nnoremap <space>w :LspNextDiagnostic<CR>
+nnoremap <space>/ :LspReferences<CR>
+nnoremap <space>r :LspRename<CR>
+nnoremap <space>f :LspDocumentFormat<CR>

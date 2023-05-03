@@ -1,35 +1,32 @@
 filetype on
 
-" set nvim config basedir
-if has('unix')
-    let g:nvim_config_dir = expand('~/.config/nvim/')
-else
-    let g:nvim_config_dir = expand('~/AppData/Local/nvim/')
+" Vim config setting
+let g:config_dir = expand('~/.config/nvim/')
+if has('win32')
+    let g:config_dir = expand('~/AppData/Local/nvim/')
 endif
 
-" set dein config dir
-let g:dein_config_dir = g:nvim_config_dir . 'dein/'
+" Load environment variables
+execute 'source ' . g:config_dir . 'environment.vim'
 
-" set cache dir
-if has('nvim')
-    let g:nvim_cache_dir = expand('~/.cache/nvim/')
-else
-    let g:nvim_cache_dir = expand('~/.cache/vim/')
-endif
+" Load native settings
+execute 'source ' . g:config_dir . 'common.vim'
 
-" Install dependencies
-execute 'source ' . g:nvim_config_dir . 'dependencies.vim'
+" Load keymaps
+execute 'source ' . g:config_dir . 'keymap.vim'
 
-" Dein startup
-execute 'source ' . g:dein_config_dir . 'dein.vim'
+" Load filetype dependent settings
+execute 'source ' . g:config_dir . 'filetype.vim'
 
-" General settings
-execute 'source ' . g:nvim_config_dir . 'common.vim'
+" Install external dependencies
+execute 'source ' . g:config_dir . 'dependencies.vim'
 
-" Setting by filetype
-execute 'source ' . g:nvim_config_dir . 'filetype.vim'
+" Load plugins
+execute 'source ' . g:config_dir . 'plugin.vim'
 
-" ======================
-" native paths
-" ======================
-" let g:python3_host_prog = ''
+" Color scheme
+try
+    colorscheme molokai
+catch
+    colorscheme ron
+endtry

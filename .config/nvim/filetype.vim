@@ -1,27 +1,17 @@
-" ======================
-" ft plugins
-" ======================
+" ===========================
+" Filetype dependent settings
+" ===========================
 
-au Bufread,BufNewFile *.tf,tfvars setf terraform
+" Custom filetype
+autocmd BufRead,BufNewFile *.tf set filetype=terraform
 
-" set ftplugin config basedir
-if has('unix')
-    let s:ftplugin_dir = expand('~/.config/nvim/ftplugin/')
-else
-    let s:ftplugin_dir = expand('~/AppData/Local/nvim/ftplugin/')
-endif
+" Set filetype dependent config base directory
+let s:filetype_dir = expand('%:p:h') . '/ftplugin/'
+function s:load_filetype_script(ft_name)
+    execute 'source' . s:filetype_dir . a:ft_name . '.vim'
+endfunction
 
-let s:javascript_plugin_path = s:ftplugin_dir . 'javascript.vim'
-let s:rust_plugin_path = s:ftplugin_dir . 'rust.vim'
-let s:markdown_plugin_path = s:ftplugin_dir . 'markdown.vim'
-let s:text_plugin_path = s:ftplugin_dir . 'text.vim'
-
-au Bufread,BufNewFile *.js execute 'source ' . s:javascript_plugin_path
-au Bufread,BufNewFile *.json execute 'source ' . s:javascript_plugin_path
-au Bufread,BufNewFile *.jsx execute 'source ' . s:javascript_plugin_path
-au Bufread,BufNewFile *.ts execute 'source ' . s:javascript_plugin_path
-au Bufread,BufNewFile *.tsx execute 'source ' . s:javascript_plugin_path
-au Bufread,BufNewFile *.html execute 'source ' . s:javascript_plugin_path
-au FileType rust execute 'source ' . s:rust_plugin_path
-au FileType markdown execute 'source ' . s:markdown_plugin_path
-" au FileType text execute 'source ' . s:text_plugin_path
+" Load filetype settings
+autocmd FileType javascript call s:load_filetype_script('javascript')
+autocmd FileType markdown call s:load_filetype_script('markdown')
+autocmd FileType rust call s:load_filetype_script('rust')
