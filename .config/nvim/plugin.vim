@@ -85,6 +85,10 @@ call plug#begin(s:plugin_base_dir)
         endif
     endif
 
+    if has('nvim') || version >= 900
+        Plug 'github/copilot.vim'
+    endif
+
     " Deno dependent plugins
     if exepath('deno') != ''
         " ddu.vim
