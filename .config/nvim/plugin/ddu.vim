@@ -9,8 +9,11 @@ call ddu#custom#patch_global({
 \     'uiParams': {
 \         'filer': {
 \             'toggle': v:true,
+\             'split': 'vertical',
+\             'splitDirection': 'topleft',
 \             'sort': 'filename',
 \             'sortTreesFirst': v:true,
+\             'winWidth': &columns / 4,
 \         },
 \     },
 \ })
@@ -61,24 +64,24 @@ function! s:ddu_filer_settings() abort
 
     nnoremap <buffer><expr> <CR>
     \   ddu#ui#get_item()->get('isTree', v:false) ?
-    \   '<cmd>call ddu#ui#filer#do_action("itemAction", {"name": "narrow"})<CR>' :
-    \   '<cmd>call ddu#ui#filer#do_action("itemAction", {"name": "open"})<CR>'
-    nnoremap <buffer> <F5> <cmd>call ddu#ui#filer#do_action('refreshItems')<CR>
-    nnoremap <buffer> q <cmd>call ddu#ui#filer#do_action('quit')<CR>
-    nnoremap <buffer> <space>e <cmd>call ddu#ui#filer#do_action('quit')<CR>
-    nnoremap <buffer> ~ <cmd>call ddu#ui#filer#do_action('itemAction', {
+    \   '<cmd>call ddu#ui#do_action("expandItem", {"mode": "toggle"})<CR>' :
+    \   '<cmd>call ddu#ui#do_action("itemAction", {"mode": "open"})<CR>'
+    nnoremap <buffer> <F5> <cmd>call ddu#ui#do_action('refreshItems')<CR>
+    nnoremap <buffer> q <cmd>call ddu#ui#do_action('quit')<CR>
+    nnoremap <buffer> <space>e <cmd>call ddu#ui#do_action('quit')<CR>
+    nnoremap <buffer> ~ <cmd>call ddu#ui#do_action('itemAction', {
     \     'name': 'narrow',
     \     'params': {
     \         'path': expand('~'),
     \     },
     \ })<CR>
-    nnoremap <buffer> u <cmd>call ddu#ui#filer#do_action('itemAction', {
+    nnoremap <buffer> u <cmd>call ddu#ui#do_action('itemAction', {
     \     'name': 'narrow',
     \     'params': {
     \         'path': expand('..'),
     \     },
     \ })<CR>
-    nnoremap <buffer> h <cmd>call ddu#ui#filer#do_action('updateOptions', {
+    nnoremap <buffer> h <cmd>call ddu#ui#do_action('updateOptions', {
     \     'sourceOptions': {
     \         'file': {
     \             'matchers': ToggleHidden('file'),
