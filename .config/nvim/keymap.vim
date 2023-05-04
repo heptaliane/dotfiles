@@ -22,4 +22,9 @@ if has("nvim")
     autocmd TermOpen * set nonumber
     autocmd TermOpen * set sctolloff=0
     autocmd WinEnter * if &buftype ==# 'terminal' | startinsert | endif
+
+    " Disable nvim 0.6+ mapping
+    if has('nvim-0.6')
+        unmap Y
+    endif
 endif
