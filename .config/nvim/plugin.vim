@@ -72,7 +72,7 @@ call plug#begin(s:plugin_base_dir)
     Plug 'hashivim/vim-terraform'
 
     " Filetype dependent plugins
-    Plug 'lervag/vimtex', {'for': ['tex']}
+    Plug 'lervag/vimtex', {'for': 'tex'}
 
     " Neovim plugin support for Vim 8+
     if !has('nvim')

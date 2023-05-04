@@ -15,7 +15,7 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \]}
 
-nmap <space>x <plug>(vimtex-compile)
-nmap <space>v <plug>(vimtex-view)
+nnoremap <space>x <plug>(vimtex-compile)
+nnoremap <space>q <plug>(vimtex-view)
 
-au Bufread,BufNewFile *.tex execute 'inoremap $ $$<Left>'
+autocmd Bufread,BufNewFile *.tex execute 'inoremap $ $$<Left>'
