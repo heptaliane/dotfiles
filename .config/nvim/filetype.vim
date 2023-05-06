@@ -6,9 +6,9 @@
 autocmd BufRead,BufNewFile *.tf set filetype=terraform
 
 " Set filetype dependent config base directory
-let s:filetype_dir = expand('%:p:h') . '/ftplugin/'
+let s:filetype_dir = 'ftplugin/'
 function s:load_filetype_script(ft_name)
-    execute 'source' . s:filetype_dir . a:ft_name . '.vim'
+    execute 'source ' . g:config_dir . s:filetype_dir . a:ft_name . '.vim'
 endfunction
 
 " Load filetype settings
