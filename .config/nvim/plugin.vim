@@ -9,18 +9,26 @@ let s:plugin_base_dir = expand('~/.cache/vim/plugin/')
 let s:plug_dir = fnamemodify(s:plugin_base_dir, ':p') . 'junegunn/vim-plug/'
 
 if !isdirectory(s:plug_dir)
-    execute '!git clone https://github.com/junegunn/vim-plug ' . s:plug_dir
+    execute '!git clone https://github.com/junegunn/vim-plug ' . expand(s:plug_dir)
 endif
 
 " Setup vim-plug autoload script
-let s:vim_autoload_dir = fnamemodify('~/.vim/autoload/', ':p')
+let s:vim_autoload_dir = fnamemodify(expand('~/.vim/autoload/'), ':p')
 if !isdirectory(s:vim_autoload_dir)
-    execute '!mkdir -p ' . s:vim_autoload_dir
+    if has('win32')
+        execute '!New-Item -ItemType Directory -Force -Path ' . s:vim_autoload_dir
+    else
+        execute '!mkdir -p ' . s:vim_autoload_dir
+    endif
 endif
 
 let s:plug_autoload_script = s:vim_autoload_dir . 'plug.vim'
 if !filereadable(s:plug_autoload_script)
-    execute '!ln -sf ' . s:plug_dir . 'plug.vim ' . s:plug_autoload_script
+    if has('win32')
+        execute '!New-Item -ItemType HardLink -Path ' . s:plug_autoload_script . ' -Target ' . s:plug_dir . 'plug.vim'
+    else
+        execute '!ln -sf ' . s:plug_dir . 'plug.vim ' . s:plug_autoload_script
+    endif
 endif
 
 if has('nvim')
