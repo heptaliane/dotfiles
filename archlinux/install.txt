@@ -1,0 +1,42 @@
+# Editor
+vim
+
+# Browser
+brave-bin
+firefox
+geckodriver
+
+# Languages
+python
+rustup
+
+# Virtual environment
+pyenv
+nvm
+
+# Network
+networkmanager
+nm-connection-editor
+network-manager-applet
+
+# GUI
+xorg
+xfce4
+xfce4-goodies
+
+# Input method
+fcitx5-im
+fcitx5-qt
+fcitx5-gtk
+# fcitx5-mozc-ut
+
+# Audio
+alsa-utils
+alsa-plugins
+
+# Fonts
+ttf-hackgen
+
+# Other tools
+htop
+samba

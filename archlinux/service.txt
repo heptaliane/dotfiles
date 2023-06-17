@@ -1,0 +1,5 @@
+NetworkManager
+sshd
+alsa
+smb
+nmb
