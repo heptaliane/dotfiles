@@ -2,8 +2,7 @@
 alias ipconfig='ip -f inet addr'
 alias ls='ls --color'
 alias sl='ls'
-alias vim='NVIM_LSTEM_ADDRESS=/tmp/nvim_socket nvim'
-alias mount='mount -o gid=$(id -g),uid=$(id -u)'
+alias nvim='NVIM_LSTEM_ADDRESS=/tmp/nvim_socket nvim'
 alias sudo='sudo ' # enable complete after sudo statement
 
 # The following lines were added by compinstall
@@ -15,7 +14,7 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]
 zstyle ':completion:*' menu select=1
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
 zstyle ':completion:*' use-compctl true
-zstyle :compinstall filename '/home/kenta/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -29,13 +28,12 @@ SAVEHIST=1000
 export EDITOR=nvim
 PROMPT='[%F{200}%n%F{white}@%F{010}%c%F{015}]%# '
 
-bindkey -v
 setopt AUTO_CD
 export LSCOLORS='exfxcxdxbxegedagacad'
 zstyle ':completion:*' list-colors ''
 
 # xmodmap
-xmodmap ~/.xmodmaprc
+# xmodmap ~/.xmodmaprc
 
 # nvm
 nvm_script="/usr/share/nvm/init-nvm.sh"
