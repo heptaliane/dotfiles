@@ -1,5 +1,6 @@
 # Editor
 vim
+neovim
 
 # Browser
 brave-bin
@@ -33,6 +34,9 @@ fcitx5-gtk
 # Audio
 alsa-utils
 alsa-plugins
+pulseaudio
+pulseaudio-alsa
+pavucontrol
 
 # Fonts
 ttf-hackgen

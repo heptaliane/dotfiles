@@ -1,0 +1,4 @@
+numpy
+pynvim
+neovim
+requests
