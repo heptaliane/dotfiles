@@ -77,22 +77,30 @@ screens = [
     Screen(
         bottom=bar.Bar(
             [
-                widget.CurrentLayout(),
+                widget.CurrentLayoutIcon(),
                 widget.GroupBox(),
                 widget.Prompt(),
-                widget.WindowName(),
+                widget.WindowTabs(),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
+                # widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
+                widget.Net(),
+                widget.NetGraph(),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
+                widget.CPU(),
+                widget.CPUGraph(),
+                widget.OpenWeather(
+                    location="Nishinomiya",
+                    format="{icon} {main_temp_max:.0f}\u2103/{main_temp_min:.0f}\u2103",
+                ),
+                widget.Volume(fmt="Vol: {}"),
                 widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+                widget.Clock(format="%Y-%m-%d %H:%M:%S"),
                 widget.QuickExit(),
             ],
             24,
