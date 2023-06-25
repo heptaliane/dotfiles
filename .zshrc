@@ -38,3 +38,8 @@ zstyle ':completion:*' list-colors ''
 # nvm
 nvm_script="/usr/share/nvm/init-nvm.sh"
 [ -e $nvm_script ] && source $nvm_script
+
+# Load pyenv automatically by appending
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

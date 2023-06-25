@@ -19,6 +19,7 @@ nvm
 networkmanager
 nm-connection-editor
 network-manager-applet
+wget
 
 # GUI
 xorg
@@ -29,7 +30,7 @@ xfce4-goodies
 fcitx5-im
 fcitx5-qt
 fcitx5-gtk
-# fcitx5-mozc-ut
+fcitx5-mozc-ut
 
 # Audio
 alsa-utils
@@ -41,6 +42,14 @@ pavucontrol
 # Fonts
 ttf-hackgen
 
+# Graphics
+mesa
+gimp
+inkscape
+imagemagick
+ffmpeg
+
 # Other tools
 htop
 samba
+qtile
