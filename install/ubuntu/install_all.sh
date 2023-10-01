@@ -11,14 +11,15 @@ apt_packages=$(cat packages/apt.txt)
 sudo apt install -y ${apt_packages}
 
 # Install vim
-if [ -n $(which vim) ]; then
+if [ -z $(which vim) ]; then
     sudo bash installer/vim.sh ${VIM_VERSION}
 fi
 
 # Install pyenv
-if [ -n $(which pyenv) ]; then
+if [ -z $(which pyenv) ]; then
     sudo bash installer/pyenv.sh ${PYENV_VERSION}
 fi
 
 # Install python
 pyenv install ${PYTHON_VERSION}
+pyenv global ${PYTHON_VERSION}

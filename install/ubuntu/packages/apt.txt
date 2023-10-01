@@ -16,7 +16,7 @@ libxml2-dev
 libxmlsec1-dev
 libxt-dev
 make
-python
+python3
 tk-dev
 unzip
 xz-utils
