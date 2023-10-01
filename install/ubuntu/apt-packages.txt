@@ -1,8 +1,0 @@
-unzip
-make
-clang
-git
-libtool-bin
-libxt-dev
-libgtk-3-dev
-libpython3-dev
