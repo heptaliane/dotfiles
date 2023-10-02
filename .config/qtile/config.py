@@ -94,6 +94,8 @@ screens = [
                 # widget.StatusNotifier(),
                 widget.CPU(),
                 widget.CPUGraph(),
+                widget.Memory(measure_mem="G"),
+                widget.MemoryGraph(),
                 widget.OpenWeather(
                     location="Nishinomiya",
                     format="{icon} {main_temp_max:.0f}\u2103/{main_temp_min:.0f}\u2103",

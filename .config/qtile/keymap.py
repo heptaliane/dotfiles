@@ -6,10 +6,13 @@ from libqtile.core.manager import Qtile
 
 import consts
 
+
 ALT = "mod1"
 SUPER = "mod4"
 SHIFT = "shift"
 CONTROL = "control"
+
+MOD = ALT
 
 
 @lazy.function
@@ -62,20 +65,20 @@ def swap_prev_window(qtile: Qtile):
 
 
 keys = [
-    Key([SUPER], "k", lazy.group.prev_window()),
-    Key([SUPER], "j", lazy.group.next_window()),
-    Key([SUPER, SHIFT], "k", swap_prev_window()),
-    Key([SUPER, SHIFT], "j", swap_next_window()),
+    Key([MOD], "k", lazy.group.prev_window()),
+    Key([MOD], "j", lazy.group.next_window()),
+    Key([MOD, SHIFT], "k", swap_prev_window()),
+    Key([MOD, SHIFT], "j", swap_next_window()),
 
-    Key([SUPER], "h", lazy.screen.prev_group()),
-    Key([SUPER], "l", lazy.screen.next_group()),
-    Key([SUPER, SHIFT], "h", move_prev_group),
-    Key([SUPER, SHIFT], "l", move_next_group),
+    Key([MOD], "h", lazy.screen.prev_group()),
+    Key([MOD], "l", lazy.screen.next_group()),
+    Key([MOD, SHIFT], "h", move_prev_group),
+    Key([MOD, SHIFT], "l", move_next_group),
 
-    Key([SUPER], "o", lazy.spawn(guess_terminal())),
-    Key([SUPER], "b", lazy.spawn(consts.BROWSER)),
-    Key([SUPER], "f", lazy.spawn(consts.FILE_MANAGER)),
+    Key([MOD], "o", lazy.spawn(guess_terminal())),
+    Key([MOD], "b", lazy.spawn(consts.BROWSER)),
+    Key([MOD], "f", lazy.spawn(consts.FILE_MANAGER)),
 
-    Key([SUPER, SHIFT], "r", lazy.reload_config()),
+    Key([MOD, SHIFT], "r", lazy.reload_config()),
     Key([ALT], "F4", lazy.window.kill()),
 ]

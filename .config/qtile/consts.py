@@ -2,3 +2,4 @@
 
 BROWSER = "brave"
 FILE_MANAGER = "thunar"
+SLACK = "slack"
