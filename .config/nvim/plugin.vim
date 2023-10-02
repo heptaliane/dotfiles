@@ -78,9 +78,13 @@ call plug#begin(s:plugin_base_dir)
     " Filetype syntax
     Plug 'aklt/plantuml-syntax'
     Plug 'hashivim/vim-terraform'
+    Plug 'udalov/kotlin-vim'
 
     " Filetype dependent plugins
     Plug 'lervag/vimtex', {'for': 'tex'}
+
+    " Startup analyzer
+    Plug 'dstein64/vim-startuptime'
 
     " Neovim plugin support for Vim 8+
     if !has('nvim')
@@ -93,7 +97,7 @@ call plug#begin(s:plugin_base_dir)
         endif
     endif
 
-    if has('nvim') || version >= 900
+    if version >= 900
         Plug 'github/copilot.vim'
     endif
 

@@ -11,7 +11,7 @@ let g:lightline = {
     \                ['lsp_errors', 'lsp_warnings']],
     \   },
     \ 'component_function': {
-    \       'gitbranch': 'fugitive#head',
+    \       'gitbranch': 'FugitiveHead',
     \   },
     \ 'component_expand': {
     \       'lsp_warnings': 'lightline_lsp#warnings',

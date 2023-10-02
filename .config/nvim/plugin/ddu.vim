@@ -13,7 +13,7 @@ call ddu#custom#patch_global({
 \             'splitDirection': 'topleft',
 \             'sort': 'filename',
 \             'sortTreesFirst': v:true,
-\             'winWidth': &columns / 4,
+\             'winWidth': 40,
 \         },
 \     },
 \ })

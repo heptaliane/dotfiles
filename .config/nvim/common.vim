@@ -25,6 +25,8 @@ set conceallevel=0
 set fileformat=unix
 set encoding=utf-8
 set clipboard+=unnamedplus
+set backspace=indent,eol,start
+set cursorline
 
 if has('win32')
     let &shell = executable('pwsh') ? 'pwsh' : 'powershell'

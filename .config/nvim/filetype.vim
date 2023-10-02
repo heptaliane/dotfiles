@@ -13,4 +13,6 @@ endfunction
 
 " Load filetype settings
 autocmd FileType javascript call s:load_filetype_script('javascript')
+autocmd FileType json call s:load_filetype_script('javascript')
 autocmd FileType markdown call s:load_filetype_script('markdown')
+autocmd FileType sql call s:load_filetype_script('sql')
