@@ -49,8 +49,8 @@ nnoremap <space>e <cmd>Ddu
 \     -ui=filer
 \     -resume
 \     -sync
-\     -source-option-path=`getcwd()`
-\     -source-option-columns=filename file<CR>
+\     -source-option-_-path=`getcwd()`
+\     -source-option-_-columns=filename file<CR>
 
 " ddu-filter keymap
 function! s:ddu_filer_settings() abort
