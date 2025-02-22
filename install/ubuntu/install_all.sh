@@ -26,6 +26,11 @@ if [ -z $(which pyenv) ]; then
     sudo bash installer/pyenv.sh ${PYENV_VERSION}
 fi
 
+# Install brave
+if [ -z $(which brave) ]; then
+    sudo bash installer/brave.sh
+fi
+
 # Install python
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
