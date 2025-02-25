@@ -36,7 +36,7 @@ if has('nvim')
 endif
 
 " Plugin config directory
-let g:plugin_config_dir = g:config_dir . '/plugin/'
+let g:plugin_config_dir = g:config_dir . 'plugin/'
 call plug#begin(s:plugin_base_dir)
     " Custom colorscheme
     Plug 'tomasr/molokai'
@@ -46,9 +46,6 @@ call plug#begin(s:plugin_base_dir)
 
     " Highlight
     Plug 't9md/vim-quickhl'
-
-    " Indent guide
-    Plug 'nathanaelkane/vim-indent-guides'
 
     " Autocompletion
     Plug 'Shougo/neco-syntax'
@@ -82,6 +79,7 @@ call plug#begin(s:plugin_base_dir)
 
     " Filetype dependent plugins
     Plug 'lervag/vimtex', {'for': 'tex'}
+    Plug 'rust-lang/rust.vim', {'for': 'rust'}
 
     " Startup analyzer
     Plug 'dstein64/vim-startuptime'
@@ -97,7 +95,12 @@ call plug#begin(s:plugin_base_dir)
         endif
     endif
 
-    if version >= 900
+    if has('nvim')
+        " Indent guide
+        Plug 'lukas-reineke/indent-blankline.nvim'
+    endif
+
+    if has('nvim') || version >= 900
         Plug 'github/copilot.vim'
     endif
 
@@ -134,13 +137,15 @@ call plug#end()
 
 " Plugin custom settings
 function! s:custom_setting(basename)
-    execute 'source ' . g:config_dir . '/plugin/' . a:basename . '.vim'
+    execute 'source ' . g:plugin_config_dir . a:basename . '.vim'
+endfunction
+function! s:custom_lua_script(basename)
+    execute 'source ' . g:plugin_config_dir . a:basename . '.lua'
 endfunction
 
 call s:custom_setting('molokai')
 call s:custom_setting('caw')
 call s:custom_setting('vim-quickhl')
-call s:custom_setting('vim-indent-guides')
 call s:custom_setting('auto-pairs')
 call s:custom_setting('vim-fugitive')
 call s:custom_setting('gitgutter')
@@ -149,6 +154,10 @@ call s:custom_setting('lightline')
 call s:custom_setting('rainbow')
 call s:custom_setting('vista')
 call s:custom_setting('vimtex')
+
+if has('nvim')
+    call s:custom_lua_script('indent-blankline')
+endif
 
 if exepath('deno') != ''
     call s:custom_setting('ddu')
