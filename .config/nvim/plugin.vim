@@ -98,6 +98,9 @@ call plug#begin(s:plugin_base_dir)
     if has('nvim')
         " Indent guide
         Plug 'lukas-reineke/indent-blankline.nvim'
+
+        " Extra highlights
+        Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     endif
 
     if has('nvim') || version >= 900
