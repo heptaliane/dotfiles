@@ -42,7 +42,7 @@ call plug#begin(s:plugin_base_dir)
     Plug 'tomasr/molokai'
 
     " Toggle comment
-    Plug 'tyru/caw.vim'
+    Plug 'tpope/vim-commentary'
 
     " Highlight
     Plug 't9md/vim-quickhl'
@@ -147,7 +147,7 @@ function! s:custom_lua_script(basename)
 endfunction
 
 call s:custom_setting('molokai')
-call s:custom_setting('caw')
+call s:custom_setting('commentary')
 call s:custom_setting('vim-quickhl')
 call s:custom_setting('auto-pairs')
 call s:custom_setting('vim-fugitive')
