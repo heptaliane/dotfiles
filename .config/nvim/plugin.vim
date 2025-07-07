@@ -136,6 +136,24 @@ call plug#begin(s:plugin_base_dir)
         Plug 'Shougo/ddc-filter-sorter_rank'
         Plug 'tani/ddc-fuzzy'
     endif
+
+    " Avante.nvim dependencies
+    if has('nvim')
+        " Dependencies
+        Plug 'nvim-lua/plenary.nvim'
+        Plug 'MunifTanjim/nui.nvim'
+        Plug 'MeanderingProgrammer/render-markdown.nvim'
+
+        " Optional dependencies
+        Plug 'hrsh7th/nvim-cmp'
+        Plug 'nvim-tree/nvim-web-devicons'
+        Plug 'HakonHarnes/img-clip.nvim'
+        Plug 'zbirenbaum/copilot.lua'
+        Plug 'stevearc/dressing.nvim'
+        Plug 'folke/snacks.nvim'
+
+        Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+    endif
 call plug#end()
 
 " Plugin custom settings
@@ -160,6 +178,7 @@ call s:custom_setting('vimtex')
 
 if has('nvim')
     call s:custom_lua_script('indent-blankline')
+    call s:custom_lua_script('avante')
 endif
 
 if exepath('deno') != ''
