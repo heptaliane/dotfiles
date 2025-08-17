@@ -77,7 +77,7 @@ screens = [
     Screen(
         bottom=bar.Bar(
             [
-                widget.CurrentLayoutIcon(),
+                widget.CurrentLayout(),
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowTabs(),
